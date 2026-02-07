@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cardioflow"
+version = "0.0.0"
+description = "Cardiovascular flow models traced to PDF sources"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "CardioFlow Contributors"}]
+
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "matplotlib>=3.8",
+  "typer>=0.12",
+  "pytest>=8.0",
+]
+
+[project.scripts]
+cardioflow = "cardio_onefile:main"
+
+[tool.setuptools]
+py-modules = ["cardio_onefile"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

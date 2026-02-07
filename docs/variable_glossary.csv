@@ -1,0 +1,18 @@
+legacy_symbol,new_name,unit,description,source_ref
+STW,sig_activation_square,ratio,Activation timing waveform,p31
+SSW,sig_activation_sine,ratio,Activation sine waveform,p31
+SLV,left_ventricle_stiffness_cgs,cgs,Left ventricular stiffness,p32
+PLVM,left_ventricle_pressure_mmhg,mmhg,Left ventricular pressure output,p33
+PCAM,arterial_compliance_pressure_mmhg,mmhg,Arterial compliance pressure proxy,p33
+QLV,left_ventricle_volume_ml,ml,Left ventricular volume state,p32
+FLA,mitral_flow_ml_per_s,ml_per_s,Mitral valve flow,p32
+FRA,tricuspid_flow_ml_per_s,ml_per_s,Tricuspid valve flow,p32
+PLA,left_atrium_pressure_cgs,cgs,Left atrial pressure algebraic,p32
+PRA,right_atrium_pressure_cgs,cgs,Right atrial pressure algebraic,p32
+PLV,left_ventricle_pressure_cgs,cgs,Left ventricular pressure algebraic,p32
+PRV,right_ventricle_pressure_cgs,cgs,Right ventricular pressure algebraic,p32
+PA3,pressure_aorta_3_cgs,cgs,Systemic arterial compartment pressure,p32
+FP1,state_pulmonary_artery_1_flow_ml_per_s,ml_per_s,Pulmonary segment inertial flow,p31
+FA1,state_aorta_1_flow_ml_per_s,ml_per_s,Aortic root inertial flow,p32
+FV2,state_systemic_vein_2_flow_ml_per_s,ml_per_s,Systemic venous inertial flow,p32
+FRV,state_pulmonic_flow_ml_per_s,ml_per_s,Pulmonic valve flow,p32
