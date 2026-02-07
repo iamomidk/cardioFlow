@@ -1097,6 +1097,16 @@ def plot_onepage_comparison(
     return figure
 
 
+def make_healthy_vs_af_figure(
+    healthy: dict[str, np.ndarray],
+    arrhythmia: dict[str, np.ndarray],
+    *,
+    t_start: float = 0.0,
+    t_end: float = 3.0,
+) -> plt.Figure:
+    return plot_onepage_comparison(healthy, arrhythmia, t_start_s=t_start, t_end_s=t_end)
+
+
 # 11. Export helpers
 def _write_timeseries_csv(path_csv: Path, outputs: dict[str, np.ndarray], prefix: str) -> None:
     export_columns = {
@@ -1123,6 +1133,12 @@ def save_onepage(fig: plt.Figure, outpath: str, *, format: str = "pdf", dpi: int
     path = Path(outpath)
     path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, format=format, dpi=dpi, bbox_inches="tight")
+
+
+def export_onepage(fig: plt.Figure, outpath_pdf: str, outpath_png: str | None = None) -> None:
+    save_onepage(fig, outpath_pdf, format="pdf")
+    if outpath_png:
+        save_onepage(fig, outpath_png, format="png", dpi=300)
 
 
 def load_af_config_json(path: str | None, default_seed: int) -> AtrialArrhythmiaConfig:
